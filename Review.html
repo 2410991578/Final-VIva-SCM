@@ -2,106 +2,45 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Café Review Card</title>
-  <link rel="stylesheet" href="Review.css">
+  <link rel="stylesheet" href="Review.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"> <!-- For bx icons -->
 </head>
 
 <body>
   <header>
     <div class="logo">
-      <img src="../Documents/Final logo.png" alt="" height="100px">
-      <!--img src, will add later on-->
+      <img src="../Documents/Final logo.png" alt="Café Logo" height="100px" loading="lazy" />
     </div>
-    <!--menu icon-->
-    <!-- <i class='bx bx-menu' id="menu-icon"></i> -->
-    <!--Links-->
-    <ul class="navbar">
-      <li><a href="../Home Page/MainPage.html">Home</a></li>
-      <li><a href="../About/About.html">About Us</a></li>
-      <li><a href="../Merchandise/merchandise.html">Merchandise</a></li>
-      <li><a href="../Images/Page 1.html">Products</a></li>
-      <li><a href="../Review/Review.html">Customers</a></li>
-      <li><a href="../Login Page/Login.html">Login</a></li>
-    </ul>
-    <!--icons-->
+    <nav>
+      <ul class="navbar">
+        <li><a href="../Home Page/MainPage.html">Home</a></li>
+        <li><a href="../About/About.html">About Us</a></li>
+        <li><a href="../Merchandise/merchandise.html">Merchandise</a></li>
+        <li><a href="../Images/Page 1.html">Products</a></li>
+        <li><a href="../Review/Review.html">Customers</a></li>
+        <li><a href="../Login Page/Login.html">Login</a></li>
+      </ul>
+    </nav>
     <div class="header-icon">
-      <a href="../Cart/Cart.html"><i class='bx bx-cart-alt'></i></a>
+      <a href="../Cart/Cart.html"><i class='bx bx-cart-alt' aria-label="Cart"></i></a>
     </div>
-    <!--search box-->
   </header>
-  <div class="container">
+
+  <main class="container">
+    <!-- Repeat this block or generate dynamically via JS -->
     <div class="review-card">
       <div class="review-header">
-        <img src="profile.jpg" alt="Reviewer Profile" class="profile-pic">
+        <img src="profile.jpg" alt="Reviewer Profile Picture" class="profile-pic" loading="lazy" />
         <div>
           <h3 class="reviewer-name">John Doe</h3>
           <p class="review-date">November 17, 2024</p>
         </div>
       </div>
       <p class="review-text">
-        The ambiance of this café is amazing! The coffee is rich and smooth, and the pastries are to die for. Highly
-        recommended for a cozy evening.
+        The ambiance of this café is amazing! The coffee is rich and smooth, and the pastries are to die for. Highly recommended for a cozy evening.
       </p>
       <div class="review-footer">
-        <div class="star-rating">
-            <span class="star" data-value="1">★</span>
-            <span class="star" data-value="2">★</span>
-            <span class="star" data-value="3">★</span>
-            <span class="star" data-value="4">★</span>
-            <span class="star" data-value="5">★</span>
-        </div>
-    </div>
-    </div>
-
-    <div class="review-card">
-      <div class="review-header">
-        <img src="profile.jpg" alt="Reviewer Profile" class="profile-pic">
-        <div>
-          <h3 class="reviewer-name">John Doe</h3>
-          <p class="review-date">November 17, 2024</p>
-        </div>
-      </div>
-      <p class="review-text">
-        The ambiance of this café is amazing! The coffee is rich and smooth, and the pastries are to die for. Highly
-        recommended for a cozy evening.
-      </p>
-      <div class="review-footer">
-        <div class="star-rating">
-            <span class="star" data-value="1">★</span>
-            <span class="star" data-value="2">★</span>
-            <span class="star" data-value="3">★</span>
-            <span class="star" data-value="4">★</span>
-            <span class="star" data-value="5">★</span>
-        </div>
-    </div>
-    </div>
-
-    <div class="review-card">
-      <div class="review-header">
-        <img src="profile.jpg" alt="Reviewer Profile" class="profile-pic">
-        <div>
-          <h3 class="reviewer-name">John Doe</h3>
-          <p class="review-date">November 17, 2024</p>
-        </div>
-      </div>
-      <p class="review-text">
-        The ambiance of this café is amazing! The coffee is rich and smooth, and the pastries are to die for. Highly
-        recommended for a cozy evening.
-      </p>
-      <div class="review-footer">
-        <div class="star-rating">
-            <span class="star" data-value="1">★</span>
-            <span class="star" data-value="2">★</span>
-            <span class="star" data-value="3">★</span>
-            <span class="star" data-value="4">★</span>
-            <span class="star" data-value="5">★</span>
-        </div>
-    </div>
-    </div>
-  </div>
-</body>
-<script src="script.js"></script>
-
-</html>
+        <div class="star
