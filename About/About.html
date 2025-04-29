@@ -1,121 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Brewsters Coffee - artisan café roasting ethically sourced beans for over 15 years." />
+    <meta name="keywords" content="coffee, café, brewsters, artisan, beans, espresso, roastery" />
+    <meta property="og:title" content="Brewsters Coffee - About Us" />
+    <meta property="og:description" content="Explore the story and mission of Brewsters Coffee – where every cup is a celebration." />
+    <meta property="og:image" content="Coffee.jpg" />
+    <meta property="og:type" content="website" />
     <title>Brewsters Coffee - About Us</title>
-    <style></style>
-    <link rel="stylesheet" href="About.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="About.css" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="../Documents/Final logo.png" alt="" height="100px">
-            <!--img src, will add later on-->
+            <img src="../Documents/Final logo.png" alt="Brewsters Coffee Logo" height="100" />
         </div>
-        <!--menu icon-->
-        <!-- <i class='bx bx-menu' id="menu-icon"></i> -->
-        <!--Links-->
-        <ul class="navbar">
-            <li><a href="../Home Page/MainPage.html">Home</a></li>
-            <li><a href="../About/About.html">About Us</a></li>
-            <li><a href="../Merchandise/merchandise.html">Merchandise</a></li>
-            <li><a href="../Images/Page 1.html">Products</a></li>
-            <li><a href="../Review/Review.html">Customers</a></li>
-            <li><a href="../Login Page/Login.html">Login</a></li>
-        </ul>
-        <!--icons-->
+
+        <nav>
+            <ul class="navbar">
+                <li><a href="../Home Page/MainPage.html">Home</a></li>
+                <li><a href="../About/About.html" aria-current="page">About Us</a></li>
+                <li><a href="../Merchandise/merchandise.html">Merchandise</a></li>
+                <li><a href="../Images/Page 1.html">Products</a></li>
+                <li><a href="../Review/Review.html">Customers</a></li>
+                <li><a href="../Login Page/Login.html">Login</a></li>
+            </ul>
+        </nav>
+
         <div class="header-icon">
-            <div class="search">
-                <input type="text" name="search" id="" placeholder="Search here..">
-                <i class='bx bx-search' id="search icon"></i>  
-            </div>
-            <a href="../Cart/Cart.html"><i class='bx bx-cart-alt'></i></a>
+            <form class="search" role="search" aria-label="Site Search">
+                <input type="text" id="search-box" placeholder="Search here..." name="query" />
+                <button type="submit" aria-label="Search"><i class='bx bx-search'></i></button>
+            </form>
+            <a href="../Cart/Cart.html" aria-label="View Cart"><i class='bx bx-cart-alt'></i></a>
         </div>
-        <!--search box-->
     </header>
 
-    <div class="container">
+    <main class="container">
         <section class="about-section">
-            <img src="Coffee.jpg" alt="Brewsters Coffee" class="about-image">
+            <img src="Coffee.jpg" alt="Freshly brewed coffee at Brewsters" class="about-image" />
             <div class="about-content">
-                <h2 class="about-title">About Brewsters Coffee</h2>
-                <p class="about-text">
-                    Brewsters Coffee is a family-owned artisan coffee roastery and café that has been bringing the best coffee experiences to our community for over 15 years. We are passionate about sourcing the highest quality, ethically-grown coffee beans and roasting them to perfection to create the most flavorful and aromatic cups of coffee.
+                <h2>About Brewsters Coffee</h2>
+                <p>
+                    Brewsters Coffee is a family-owned artisan coffee roastery and café that’s been serving heartwarming brews for over 15 years. We're all about ethically-grown beans, masterfully roasted, and served with soul.
                 </p>
-                <p class="about-text">
-                    Our cozy café is a gathering place where friends, neighbors, and coffee enthusiasts can come together to enjoy our delicious beverages and baked goods. We take pride in our warm hospitality and commitment to using only the freshest, locally-sourced ingredients.
+                <p>
+                    Our cozy café is where stories are shared, laughter echoes, and rich aromas linger. With fresh, locally-sourced ingredients and a passion for hospitality, we welcome you into our home of comfort and flavor.
                 </p>
             </div>
         </section>
 
         <section class="mission-section">
-            <h2 class="mission-title">Our Mission</h2>
-            <p class="mission-text">
-                At Brewsters Coffee, our mission is to provide our customers with an exceptional coffee experience that nourishes their body and soul. We believe that every cup of coffee should be a moment of joy, a respite from the everyday, and a celebration of the art of coffee making. By sourcing the finest beans, roasting them with care, and serving them with passion, we strive to create a community of coffee lovers who appreciate the craft and culture of this beloved beverage.
+            <h2>Our Mission</h2>
+            <p>
+                Our mission is simple—deliver moments of joy in every cup. We believe coffee isn’t just a drink; it’s a ritual, a pause, a celebration. Through top-notch beans, precise roasting, and heartfelt service, we aim to craft a space where community and coffee blend beautifully.
             </p>
         </section>
-    </div>
-    <section class="newsletter-section">
-        <div class="newsletter-div">
-         <h1>Subscribe to our Newsletter!!</h1>
-         <p>Sign up with your email address to receive news and updates.</p>
-         </div>
-         <div class="input-info">
-         <input type="text" id="First Name" placeholder="First Name">
-         <input type="text" id="Last Name" placeholder="Last Name">
-         <input type="text" id="Email" placeholder="Email">
-         </div>
-     </section>
+
+        <section class="newsletter-section">
+            <div class="newsletter-div">
+                <h2>Subscribe to our Newsletter</h2>
+                <p>Sign up with your email address to receive the latest news and updates.</p>
+            </div>
+            <form class="input-info" aria-label="Newsletter Signup">
+                <label for="first-name" class="visually-hidden">First Name</label>
+                <input type="text" id="first-name" name="first-name" placeholder="First Name" required />
+
+                <label for="last-name" class="visually-hidden">Last Name</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Last Name" required />
+
+                <label for="email" class="visually-hidden">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" required />
+
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </main>
+
     <footer>
         <div class="footer-container">
-            <!-- <div class="footer-section">
-                <h2><a href="#" target="_blank">Brewsters</a></h2>
-                <p></p>
-                <div class="social-icons">
-                  <a href="https://www.facebook.com/" target="_blank">
-                    <i class='bx bxl-facebook'></i>
-                  </a>
-                  <a href="https://www.instagram.com/" target="_blank">
-                    <i class='bx bxl-instagram-alt' ></i>
-                  </a>
-                  <a href="https://www.linkedin.com/" target="_blank">
-                    <i class='bx bxl-linkedin-square' ></i>
-                  </a>
-                  <a href="https://wa.me/" target="_blank">
-                    <i class='bx bxl-whatsapp-square' ></i>
-                  </a>
-                </div> -->
-                <div class="footer-section">
-                <img src="../Images/caffelogo.jpg" alt="caffelogo" width="200px" height="200px"/>
-                </div>
             <div class="footer-section">
-                <h2><a href="#" target="_blank">About</a></h2>
+                <img src="../Images/caffelogo.jpg" alt="Brewsters logo" width="200" height="200" />
+            </div>
+
+            <div class="footer-section">
+                <h3>About</h3>
                 <ul>
-                    <li>Know our Cafe</li>
-                    <li>Privacy Policy.</li>
+                    <li><a href="#">Know our Cafe</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
                 </ul>
             </div>
+
             <div class="footer-section">
-                <h2><a href="#" target="_blank">Services</a></h2>
+                <h3>Services</h3>
                 <ul>
-                    <li>Updates</li>
-                    <li>Blogs</li>
-                    <li>Customer Feedbacks</li>
+                    <li><a href="#">Updates</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">Customer Feedback</a></li>
                 </ul>
             </div>
+
             <div class="footer-section">
-                <h2><a href="#" target="_blank">Other</a></h2>
+                <h3>Other</h3>
                 <ul>
-                    <li>Contact Us</li>
-                    <li>Help</li>
-                    <li>About us </li>
-                    <li>Privacy</li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Privacy</a></li>
                 </ul>
             </div>
         </div>
-        <p class="copyright">&copy; 2024 Brewsters. All rights reserved.</p>
-      </footer>
+        <p class="copyright">
+            &copy; 2024 Brewsters. All rights reserved.
+        </p>
+    </footer>
 </body>
 </html>
