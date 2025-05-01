@@ -172,7 +172,7 @@ p {
 /* Search Box */
 .search {
     background-color: white;
-    border-radius: 30px;
+    border-radius: 31px;
     padding: 5px;
     display: flex;
     align-items: center;
