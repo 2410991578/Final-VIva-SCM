@@ -16,6 +16,9 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Bree+Serif&display=swap" rel="stylesheet">
 
+    <!-- Bootstrap CSS (for responsive grids and components) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -40,7 +43,10 @@
                 <input type="text" id="search-bar" placeholder="Looking for something?" onkeyup="searchProducts()">
                 <i class='bx bx-search'></i>
             </div>
-            <a href="../Cart/Cart.html"><i class='bx bx-cart-alt'></i></a>
+            <a href="../Cart/Cart.html" class="cart-icon">
+                <i class='bx bx-cart-alt'></i>
+                <span class="cart-count">0</span>
+            </a>
         </div>
     </header>
 
@@ -48,8 +54,7 @@
     <section class="home" id="home">
         <div class="home-text">
             <h1>Start your day<br>with Coffee</h1>
-            <p>The coffee is brewed by first roasting the green coffee beans over hot coals in a brazier. Given an
-                opportunity to sample.</p>
+            <p>The coffee is brewed by first roasting the green coffee beans over hot coals in a brazier. Given an opportunity to sample.</p>
             <a href="../Images/Page 1.html" class="btn">Shop Now</a>
         </div>
     </section>
@@ -73,8 +78,7 @@
     <!-- About Us -->
     <section class="about-us">
         <h2>ABOUT US</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam optio deserunt labore impedit maiores
-            non consequuntur fugiat, nostrum animi dolor illum...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam optio deserunt labore impedit maiores non consequuntur fugiat, nostrum animi dolor illum...</p>
         <a href="../About/About.html" class="read-more">READ MORE »</a>
 
         <div class="features">
@@ -91,15 +95,6 @@
                 <h3>Excellent Quality</h3>
             </div>
         </div>
-    </section>
-
-    <!-- Gallery -->
-    <section class="gallery">
-        <img src="../Images/gallery 1.jpg" alt="Gallery Img1" class="gallery-img-1">
-        <img src="../Images/gallery2.jpg" alt="Gallery Img2" class="gallery-img-2">
-        <img src="../Images/gallery3.jpg" alt="Gallery Img3" class="gallery-img-3">
-        <img src="../Images/gallery4.jpg" alt="Gallery Img4" class="gallery-img-4">
-        <img src="../Images/gallery5.jpg" alt="Gallery Img5" class="gallery-img-5">
     </section>
 
     <!-- Products -->
@@ -147,70 +142,6 @@
         </div>
     </section>
 
-    <!-- Shop Now Marquee -->
-    <section class="shop-now-section">
-        <a href="../Images/Page 1.html" class="shop-now-btn">
-            <marquee direction="right" scrollamount="20">Shop Now <span class="arrow">→</span></marquee>
-        </a>
-    </section>
-
-    <!-- Blogs -->
-    <section class="container blogs">
-        <h1 class="heading-1">Últimos Blogs</h1>
-        <div class="container-blogs">
-
-            <div class="card-blog">
-                <div class="container-img">
-                    <img src="../Images/blog-1.jpg" alt="Imagen Blog 1">
-                </div>
-                <div class="content-blog">
-                    <h3>Lorem, ipsum dolor sit</h3>
-                    <span>29 Noviembre 2022</span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-                    <a href="#" class="btn-read-more">Read More</a>
-                </div>
-            </div>
-
-            <div class="card-blog">
-                <div class="container-img">
-                    <img src="../Images/blog-2.jpg" alt="Imagen Blog 2">
-                </div>
-                <div class="content-blog">
-                    <h3>Lorem, ipsum dolor sit</h3>
-                    <span>29 Noviembre 2022</span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-                    <a href="#" class="btn-read-more">Read More</a>
-                </div>
-            </div>
-
-            <div class="card-blog">
-                <div class="container-img">
-                    <img src="../Images/blog-3.jpg" alt="Imagen Blog 3">
-                </div>
-                <div class="content-blog">
-                    <h3>Lorem, ipsum dolor sit</h3>
-                    <span>29 Noviembre 2022</span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-                    <a href="#" class="btn-read-more">Read More</a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Newsletter -->
-    <section class="newsletter-section">
-        <div class="newsletter-content">
-            <h1>Subscribe to our Newsletter!!</h1>
-            <p>Sign up with your email address to receive news and updates.</p>
-            <div class="input-info">
-                <input type="text" placeholder="First Name">
-                <input type="text" placeholder="Last Name">
-                <input type="email" placeholder="Email">
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer>
         <div class="footer-container">
@@ -249,7 +180,6 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="main.js"></script>
-
 </body>
 
 </html>
