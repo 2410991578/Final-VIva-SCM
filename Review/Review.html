@@ -1,107 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Café Review Card</title>
-  <link rel="stylesheet" href="Review.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Reviews</title>
+    <link rel="stylesheet" href="Review.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
-
 <body>
-  <header>
-    <div class="logo">
-      <img src="../Documents/Final logo.png" alt="" height="100px">
-      <!--img src, will add later on-->
-    </div>
-    <!--menu icon-->
-    <!-- <i class='bx bx-menu' id="menu-icon"></i> -->
-    <!--Links-->
-    <ul class="navbar">
-      <li><a href="../Home Page/MainPage.html">Home</a></li>
-      <li><a href="../About/About.html">About Us</a></li>
-      <li><a href="../Merchandise/merchandise.html">Merchandise</a></li>
-      <li><a href="../Images/Page 1.html">Products</a></li>
-      <li><a href="../Review/Review.html">Customers</a></li>
-      <li><a href="../Login Page/Login.html">Login</a></li>
-    </ul>
-    <!--icons-->
-    <div class="header-icon">
-      <a href="../Cart/Cart.html"><i class='bx bx-cart-alt'></i></a>
-    </div>
-    <!--search box-->
-  </header>
-  <div class="container">
-    <div class="review-card">
-      <div class="review-header">
-        <img src="profile.jpg" alt="Reviewer Profile" class="profile-pic">
-        <div>
-          <h3 class="reviewer-name">John Doe</h3>
-          <p class="review-date">November 17, 2024</p>
+    <header>
+        <div class="logo">
+            <img src="../Documents/Final_logo.png" alt="Café Logo" height="100">
         </div>
-      </div>
-      <p class="review-text">
-        The ambiance of this café is amazing! The coffee is rich and smooth, and the pastries are to die for. Highly
-        recommended for a cozy evening.
-      </p>
-      <div class="review-footer">
-        <div class="star-rating">
-            <span class="star" data-value="1">★</span>
-            <span class="star" data-value="2">★</span>
-            <span class="star" data-value="3">★</span>
-            <span class="star" data-value="4">★</span>
-            <span class="star" data-value="5">★</span>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../Home Page/MainPage.html">Home</a></li>
+                <li><a href="../About/About.html">About Us</a></li>
+                <li><a href="../Merchandise/merchandise.html">Merchandise</a></li>
+                <li><a href="../Images/Page_1.html">Products</a></li>
+                <li><a href="../Review/Review.html">Customers</a></li>
+                <li><a href="../Login Page/Login.html">Login</a></li>
+            </ul>
+        </nav>
+        <div class="header-icon">
+            <a href="../Cart/Cart.html" aria-label="View Cart"><i class='bx bx-cart-alt'></i></a>
+            <button class="dark-mode-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
         </div>
-    </div>
-    </div>
+    </header>
 
-    <div class="review-card">
-      <div class="review-header">
-        <img src="profile.jpg" alt="Reviewer Profile" class="profile-pic">
-        <div>
-          <h3 class="reviewer-name">John Doe</h3>
-          <p class="review-date">November 17, 2024</p>
-        </div>
-      </div>
-      <p class="review-text">
-        The ambiance of this café is amazing! The coffee is rich and smooth, and the pastries are to die for. Highly
-        recommended for a cozy evening.
-      </p>
-      <div class="review-footer">
-        <div class="star-rating">
-            <span class="star" data-value="1">★</span>
-            <span class="star" data-value="2">★</span>
-            <span class="star" data-value="3">★</span>
-            <span class="star" data-value="4">★</span>
-            <span class="star" data-value="5">★</span>
-        </div>
-    </div>
-    </div>
+    <main class="container">
+        <section>
+            <h2>Customer Reviews</h2>
+            <article class="review-card">
+                <div class="review-header">
+                    <img src="profile1.jpg" alt="Jane Smith's Profile Picture" class="profile-pic">
+                    <div>
+                        <h3 class="reviewer-name">Jane Smith</h3>
+                        <p class="review-date">April 5, 2025</p>
+                    </div>
+                </div>
+                <p class="review-text">Absolutely love the vibe here. Their caramel latte is the best I’ve had in years. Cozy corner, soft jazz, and friendly staff. Will come again!</p>
+                <div class="review-footer">
+                    <div class="star-rating" aria-label="Rated 5 stars">
+                        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                    </div>
+                </div>
+            </article>
 
-    <div class="review-card">
-      <div class="review-header">
-        <img src="profile.jpg" alt="Reviewer Profile" class="profile-pic">
-        <div>
-          <h3 class="reviewer-name">John Doe</h3>
-          <p class="review-date">November 17, 2024</p>
-        </div>
-      </div>
-      <p class="review-text">
-        The ambiance of this café is amazing! The coffee is rich and smooth, and the pastries are to die for. Highly
-        recommended for a cozy evening.
-      </p>
-      <div class="review-footer">
-        <div class="star-rating">
-            <span class="star" data-value="1">★</span>
-            <span class="star" data-value="2">★</span>
-            <span class="star" data-value="3">★</span>
-            <span class="star" data-value="4">★</span>
-            <span class="star" data-value="5">★</span>
-        </div>
-    </div>
-    </div>
-  </div>
+            <article class="review-card">
+                <div class="review-header">
+                    <img src="profile2.jpg" alt="Arjun Patel's Profile Picture" class="profile-pic">
+                    <div>
+                        <h3 class="reviewer-name">Arjun Patel</h3>
+                        <p class="review-date">March 21, 2025</p>
+                    </div>
+                </div>
+                <p class="review-text">The croissants are fresh and flaky, and their espresso hits just right. A solid place for morning fuel and people-watching.</p>
+                <div class="review-footer">
+                    <div class="star-rating" aria-label="Rated 4 stars">
+                        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star inactive">☆</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="review-card">
+                <div class="review-header">
+                    <img src="profile3.jpg" alt="Sara Kim's Profile Picture" class="profile-pic">
+                    <div>
+                        <h3 class="reviewer-name">Sara Kim</h3>
+                        <p class="review-date">February 14, 2025</p>
+                    </div>
+                </div>
+                <p class="review-text">Great place for date nights or deep convos. Loved the artisan teas. Bit pricey, but the ambiance makes it worth it.</p>
+                <div class="review-footer">
+                    <div class="star-rating" aria-label="Rated 5 stars">
+                        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
 </body>
-<script src="script.js"></script>
-
 </html>
