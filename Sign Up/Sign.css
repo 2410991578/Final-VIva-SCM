@@ -13,7 +13,7 @@ body {
     align-items: center;
     min-height: 100vh;
     background: url(https://i.pinimg.com/originals/d8/eb/27/d8eb272a2711e72b903f6dbfc288950d.jpg) no-repeat center center/cover;
-    background-attachment: fixed; /* Prevents scrolling background issues */
+    background-attachment: fixed;
 }
 
 .wrapper {
@@ -37,7 +37,7 @@ body {
     font-size: 36px;
     text-align: center;
     margin-bottom: 20px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle text shadow for readability */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .wrapper .input-box {
@@ -134,7 +134,6 @@ body {
     font-weight: 500;
 }
 
-/* Responsive Design */
 @media (max-width: 480px) {
     .wrapper {
         width: 90%;
