@@ -1,71 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale="1.0">
-        <title>Sign Up Form</title>
-        <link rel="stylesheet" href="Sign.css">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    </head>
-    <body>
-        <div class="wrapper">
-            <form id="signupForm">
-                <h1>SIGN UP</h1>
-                <div class="input-box">
-                    <input type="text" id="firstName" placeholder="First Name" required>
-                </div>
-                <div class="input-box">
-                    <input type="text" id="lastName" placeholder="Last Name" required>
-                </div>
-                <div class="input-box">
-                    <input type="number" id="mobileNumber" placeholder="Mobile Number" required minlength="10">
-                </div>
-                <div class="input-box">
-                    <input type="email" id="email" placeholder="Email" required>
-                </div>
-                <div class="input-box">
-                    <input type="password" id="password" placeholder="Password" required>
-                </div>
-                <div class="input-box">
-                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
-                </div>
-                <button type="submit" class="btn">SIGN UP</button>
-                <div class="register-link">
-                    <p>By clicking on the Sign Up button, you agree to our <u>Terms and Conditions</u> and <u>Privacy Policy</u>.</p>
-                </div>
-            </form>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up Form</title>
+  <link rel="stylesheet" href="Sign.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    /* Optional - inline styles to improve UX */
+    .error-message {
+      color: red;
+      font-size: 0.85rem;
+      margin-top: 5px;
+    }
+    .success-message {
+      color: green;
+      font-size: 1rem;
+      margin-top: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <form id="signupForm" novalidate>
+      <h1>SIGN UP</h1>
+      <div class="input-box">
+        <input type="text" id="firstName" placeholder="First Name" required />
+      </div>
+      <div class="input-box">
+        <input type="text" id="lastName" placeholder="Last Name" required />
+      </div>
+      <div class="input-box">
+        <input type="tel" id="mobileNumber" placeholder="Mobile Number (10 digits)" required pattern="\d{10}" />
+      </div>
+      <div class="input-box">
+        <input type="email" id="email" placeholder="Email" required />
+      </div>
+      <div class="input-box">
+        <input type="password" id="password" placeholder="Password" required minlength="6" />
+      </div>
+      <div class="input-box">
+        <input type="password" id="confirmPassword" placeholder="Confirm Password" required minlength="6" />
+      </div>
 
-        <script>
-            // JavaScript for handling form submission and success
-            document.getElementById("signupForm").addEventListener("submit", function(event) {
-                event.preventDefault(); // Prevent the form from submitting
+      <button type="submit" class="btn">SIGN UP</button>
 
-                // Get values from the form fields
-                var firstName = document.getElementById("firstName").value;
-                var lastName = document.getElementById("lastName").value;
-                var mobileNumber = document.getElementById("mobileNumber").value;
-                var email = document.getElementById("email").value;
-                var password = document.getElementById("password").value;
-                var confirmPassword = document.getElementById("confirmPassword").value;
+      <div class="register-link">
+        <p>By clicking on the Sign Up button, you agree to our <u>Terms and Conditions</u> and <u>Privacy Policy</u>.</p>
+      </div>
+      <div id="formMessage"></div> <!-- For inline feedback -->
+    </form>
+  </div>
 
-                // Check if passwords match
-                if (password !== confirmPassword) {
-                    alert("Passwords do not match. Please try again.");
-                    return; // Exit function if passwords don't match
-                }
+  <script>
+    const signupForm = document.getElementById("signupForm");
+    const formMessage = document.getElementById("formMessage");
 
-                // Check if all fields are filled (basic validation)
-                if (firstName && lastName && mobileNumber && email && password) {
-                    // You can further enhance this by sending data to a server (e.g., using AJAX or fetch)
-                    alert("Sign Up successful! Welcome, " + firstName + "!");
-                    // Optionally, redirect to login or homepage
-                    // window.location.href = "login.html"; 
-                } else {
-                    alert("Please fill in all fields.");
-                }
-            });
-        </script>
-    </body>
+    const showMessage = (message, type = 'error') => {
+      formMessage.innerHTML = `<p class="${type}-message">${message}</p>`;
+    };
+
+    signupForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      formMessage.innerHTML = ""; // Clear previous messages
+
+      const firstName = document.getElementById("firstName").value.trim();
+      const lastName = document.getElementById("lastName").value.trim();
+      const mobileNumber = document.getElementById("mobileNumber").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirmPassword").value;
+
+      // Basic field check
+      if (!firstName || !lastName || !mobileNumber || !email || !password || !confirmPassword) {
+        showMessage("Please fill in all fields.");
+        return;
+      }
+
+      // Validate mobile number (exactly 10 digits)
+      const mobileRegex = /^\d{10}$/;
+      if (!mobileRegex.test(mobileNumber)) {
+        showMessage("Mobile number must be exactly 10 digits.");
+        return;
+      }
+
+      // Validate passwords match
+      if (password !== confirmPassword) {
+        showMessage("Passwords do not match. Please try again.");
+        return;
+      }
+
+      // Everything is valid — show success
+      showMessage(`Sign Up successful! Welcome, ${firstName}!`, 'success');
+
+      // Reset form
+      signupForm.reset();
+
+      // Optional: Redirect after success (uncomment below if needed)
+      // setTimeout(() => {
+      //   window.location.href = "login.html";
+      // }, 2000);
+    });
+  </script>
+</body>
 </html>
