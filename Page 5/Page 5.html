@@ -1,180 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brewsters Coffee - Seasonal Items</title>
-    <style></style>
-    <link rel="stylesheet" href="Page 5.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brewsters Coffee - Seasonal Items</title>
+  <link rel="stylesheet" href="Page 5.css" />
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="../Documents/Final logo.png" alt="" height="100px">
-            <!--img src, will add later on-->
-        </div>
-        <!--menu icon-->
-        <!-- <i class='bx bx-menu' id="menu-icon"></i> -->
-        <!--Links-->
-        <ul class="navbar">
-            <li><a href="../Home Page/MainPage.html">Home</a></li>
-            <li><a href="../About/About.html">About Us</a></li>
-            <li><a href="../Merchandise/merchandise.html">Merchandise</a></li>
-            <li><a href="../Images/Page 1.html">Products</a></li>
-            <li><a href="../Review/Review.html">Customers</a></li>
-            <li><a href="../Login Page/Login.html">Login</a></li>
-        </ul>
-        <!--icons-->
-        <div class="header-icon">
-            <div class="search">
-                <input type="text" name="search" id="search-bar" placeholder="Looking for something?" onkeyup="searchProducts()">
-                <i class='bx bx-search' id="search icon"></i>  
-            </div>
-            <a href="../Cart/Cart.html"><i class='bx bx-cart-alt'></i></a>
-        </div>
-        <!--search box-->
-    </header>
-    <div class="header flex items-center justify-center">
-        <h1 class="text-white text-7xl font-bold items-center justify-center">&nbsp; &nbsp; OAK ROASTED<br> &nbsp;COFFEE|SEASONAL</h1>
-        </div>
 
-    <div class="container">
-        <div class="category-nav">
-            <!-- <button class="category-btn">All Items</button> -->
-            <button class="category-btn"><a href="../Images/Page 1.html">All Items</a></button>
-            <button class="category-btn"><a href="../Page 2/Page 2.html">Hot Drinks</a></button>
-            <button class="category-btn"><a href="../Page 3/Page 3.html">Cold Drinks</a></button>
-            <button class="category-btn"><a href="../Page 4/Page 4.html">Pastries</a></button>
-            <button class="category-btn"><a href="../Page 5/Page 5.html">Seasonal</a></button>
-        </div>
-
-    <div class="container">
-        <h2 class="category-title">Seasonal Specials</h2>
-        <div class="products-grid">
-            <div class="card" data-id="49" data-title="Pain au Chocolat" data-price="129">
-                <img src="ginger.avif" alt="Gingerbread Latte" class="card-image">
-                <div class="card-content">
-                    <h3 class="card-title">Gingerbread Latte</h3>
-                    <p class="card-description">A festive blend of espresso, steamed milk, and gingerbread syrup, topped with whipped cream and nutmeg.</p>
-                    <div class="card-footer">
-                        <span class="price">Rs.129</span>
-                        <button class="order-btn" onclick="addToCart(this)">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" data-id="50" data-title="Pain au Chocolat" data-price="159">
-                <img src="mapple.webp" alt="Maple Pecan Cold Brew" class="card-image">
-                <div class="card-content">
-                    <h3 class="card-title">Maple Pecan Cold Brew</h3>
-                    <p class="card-description">Smooth cold brew coffee infused with maple syrup and pecan flavoring, served over ice with a touch of cream.</p>
-                    <div class="card-footer">
-                        <span class="price">Rs.159</span>
-                        <button class="order-btn" onclick="addToCart(this)">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" data-id="51" data-title="Pain au Chocolat" data-price="219">
-                <img src="cider.webp" alt="Spiced Apple Cider" class="card-image">
-                <div class="card-content">
-                    <h3 class="card-title">Spiced Apple Cider</h3>
-                    <p class="card-description">Hot apple cider with cinnamon, nutmeg, and clove, garnished with a cinnamon stick and apple slice.</p>
-                    <div class="card-footer">
-                        <span class="price">Rs.219</span>
-                        <button class="order-btn" onclick="addToCart(this)">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" data-id="52" data-title="Pain au Chocolat" data-price="315">
-                <img src="pepper.avif" alt="Peppermint Mocha Frappe" class="card-image">
-                <div class="card-content">
-                    <h3 class="card-title">Peppermint Mocha Frappe</h3>
-                    <p class="card-description">Blended coffee with chocolate, peppermint, topped with whipped cream and crushed candy cane pieces.</p>
-                    <div class="card-footer">
-                        <span class="price">Rs.315</span>
-                        <button class="order-btn" onclick="addToCart(this)">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" data-id="53" data-title="Pain au Chocolat" data-price="189">
-                <img src="brulee.jpg" alt="Caramel Brulée Latte" class="card-image">
-                <div class="card-content">
-                    <h3 class="card-title">Caramel Brulée Latte</h3>
-                    <p class="card-description">Rich espresso with steamed milk and caramel brulée sauce, topped with whipped cream and caramel brulée bits.</p>
-                    <div class="card-footer">
-                        <span class="price">Rs.189</span>
-                        <button class="order-btn" onclick="addToCart(this)">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <!-- Header Section -->
+  <header>
+    <div class="logo">
+      <img src="../Documents/Final logo.png" alt="Brewsters Coffee Logo" height="100" />
     </div>
-     <!--Newsletter-->
-     <section class="newsletter-section">
-        <div class="newsletter-div">
-         <h1>Subscribe to our Newsletter!!</h1>
-         <p>Sign up with your email address to receive news and updates.</p>
-         </div>
-         <div class="input-info">
-         <input type="text" id="First Name" placeholder="First Name">
-         <input type="text" id="Last Name" placeholder="Last Name">
-         <input type="text" id="Email" placeholder="Email">
-         </div>
-     </section>
+    <nav>
+      <ul class="navbar">
+        <li><a href="../Home Page/MainPage.html">Home</a></li>
+        <li><a href="../About/About.html">About Us</a></li>
+        <li><a href="../Merchandise/merchandise.html">Merchandise</a></li>
+        <li><a href="../Images/Page 1.html">Products</a></li>
+        <li><a href="../Review/Review.html">Customers</a></li>
+        <li><a href="../Login Page/Login.html">Login</a></li>
+      </ul>
+    </nav>
+    <div class="header-icon">
+      <div class="search">
+        <input type="text" id="search-bar" placeholder="Looking for something?" onkeyup="searchProducts()" />
+        <i class='bx bx-search' id="search-icon"></i>
+      </div>
+      <a href="../Cart/Cart.html"><i class='bx bx-cart-alt'></i></a>
+    </div>
+  </header>
 
-     <!--Contact us page-->
-     <footer>
-     <div class="footer-container">
-         <!-- <div class="footer-section">
-             <h2><a href="#" target="_blank">Brewsters</a></h2>
-             <p></p>
-             <div class="social-icons">
-               <a href="https://www.facebook.com/" target="_blank">
-                 <i class='bx bxl-facebook'></i>
-               </a>
-               <a href="https://www.instagram.com/" target="_blank">
-                 <i class='bx bxl-instagram-alt' ></i>
-               </a>
-               <a href="https://www.linkedin.com/" target="_blank">
-                 <i class='bx bxl-linkedin-square' ></i>
-               </a>
-               <a href="https://wa.me/" target="_blank">
-                 <i class='bx bxl-whatsapp-square' ></i>
-               </a>
-             </div> -->
-             <div class="footer-section">
-             <img src="../Images/caffelogo.jpg" alt="caffelogo" width="200px" height="200px"/>
-             </div>
-         <div class="footer-section">
-             <h2><a href="#" target="_blank">About</a></h2>
-             <ul>
-                 <li>Know our Cafe</li>
-                 <li>Privacy Policy</li>
-             </ul>
-         </div>
-         <div class="footer-section">
-             <h2><a href="#" target="_blank">Services</a></h2>
-             <ul>
-                 <li>Updates</li>
-                 <li>Blogs</li>
-                 <li>Customer Feedbacks</li>
-             </ul>
-         </div>
-         <div class="footer-section">
-             <h2><a href="#" target="_blank">Other</a></h2>
-             <ul>
-                 <li>Contact Us</li>
-                 <li>Help</li>
-                 <li>Privacy</li>
-             </ul>
-         </div>
-     </div>
-     <p class="copyright">&copy; 2024 Brewsters. All rights reserved.</p>
-   </footer>
+  <!-- Hero Banner -->
+  <section class="hero flex items-center justify-center">
+    <h1 class="text-white text-7xl font-bold text-center">OAK ROASTED<br />COFFEE | SEASONAL</h1>
+  </section>
+
+  <!-- Category Navigation -->
+  <nav class="category-nav">
+    <button class="category-btn"><a href="../Images/Page 1.html">All Items</a></button>
+    <button class="category-btn"><a href="../Page 2/Page 2.html">Hot Drinks</a></button>
+    <button class="category-btn"><a href="../Page 3/Page 3.html">Cold Drinks</a></button>
+    <button class="category-btn"><a href="../Page 4/Page 4.html">Pastries</a></button>
+    <button class="category-btn"><a href="../Page 5/Page 5.html">Seasonal</a></button>
+  </nav>
+
+  <!-- Product Grid -->
+  <main class="container">
+    <section class="products">
+      <h2 class="category-title">Seasonal Specials</h2>
+      <div class="products-grid">
+
+        <!-- Product Cards -->
+        <div class="card" data-id="49" data-title="Gingerbread Latte" data-price="129">
+          <img src="ginger.avif" alt="Gingerbread Latte" class="card-image" />
+          <div class="card-content">
+            <h3 class="card-title">Gingerbread Latte</h3>
+            <p class="card-description">Espresso, steamed milk, gingerbread syrup, topped with whipped cream and nutmeg.</p>
+            <div class="card-footer">
+              <span class="price">Rs.129</span>
+              <button class="order-btn" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-id="50" data-title="Maple Pecan Cold Brew" data-price="159">
+          <img src="mapple.webp" alt="Maple Pecan Cold Brew" class="card-image" />
+          <div class="card-content">
+            <h3 class="card-title">Maple Pecan Cold Brew</h3>
+            <p class="card-description">Cold brew coffee with maple and pecan, served over ice with cream.</p>
+            <div class="card-footer">
+              <span class="price">Rs.159</span>
+              <button class="order-btn" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-id="51" data-title="Spiced Apple Cider" data-price="219">
+          <img src="cider.webp" alt="Spiced Apple Cider" class="card-image" />
+          <div class="card-content">
+            <h3 class="card-title">Spiced Apple Cider</h3>
+            <p class="card-description">Hot cider with cinnamon, nutmeg, and clove. Garnished with cinnamon stick and apple slice.</p>
+            <div class="card-footer">
+              <span class="price">Rs.219</span>
+              <button class="order-btn" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-id="52" data-title="Peppermint Mocha Frappe" data-price="315">
+          <img src="pepper.avif" alt="Peppermint Mocha Frappe" class="card-image" />
+          <div class="card-content">
+            <h3 class="card-title">Peppermint Mocha Frappe</h3>
+            <p class="card-description">Blended mocha and peppermint with whipped cream and crushed candy cane.</p>
+            <div class="card-footer">
+              <span class="price">Rs.315</span>
+              <button class="order-btn" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-id="53" data-title="Caramel Brulée Latte" data-price="189">
+          <img src="brulee.jpg" alt="Caramel Brulée Latte" class="card-image" />
+          <div class="card-content">
+            <h3 class="card-title">Caramel Brulée Latte</h3>
+            <p class="card-description">Espresso, steamed milk, caramel brulée sauce, whipped cream and crunchy bits.</p>
+            <div class="card-footer">
+              <span class="price">Rs.189</span>
+              <button class="order-btn" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+      <div class="newsletter-div">
+        <h2>Subscribe to our Newsletter!</h2>
+        <p>Sign up to receive the latest news and seasonal updates.</p>
+        <form class="newsletter-form">
+          <input type="text" id="first-name" name="first-name" placeholder="First Name" required />
+          <input type="text" id="last-name" name="last-name" placeholder="Last Name" required />
+          <input type="email" id="email" name="email" placeholder="Email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <img src="../Images/caffelogo.jpg" alt="Brewsters Coffee Logo" width="200" height="200" />
+      </div>
+      <div class="footer-section">
+        <h3>About</h3>
+        <ul>
+          <li>Know our Cafe</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Services</h3>
+        <ul>
+          <li>Updates</li>
+          <li>Blogs</li>
+          <li>Customer Feedbacks</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Other</h3>
+        <ul>
+          <li>Contact Us</li>
+          <li>Help</li>
+          <li>Privacy</li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">
+      &copy; 2025 Brewsters. All rights reserved.
+    </p>
+  </footer>
+
+  <script src="../Images/index.js"></script>
 </body>
-<script src="../Images/index.js"></script>
 </html>
